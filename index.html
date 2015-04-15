@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Validation</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<form action="index.html" method="post" name="contactForm" onsubmit="return formValidation()">       
+            <div class="row">
+                <label for="name">Full name:</label>
+                <div class="form-input">
+                    <input id="name" name="userName" size="30" type="text" placeholder="Full name"><br>
+                    <span class="error" id="nameError"></span>
+                </div>
+            </div>
+          <div class="row">
+                <label for="email">E-mail:</label>
+                <div class="form-input">
+                    <input id="email" name="email" size="30" type="text" placeholder="Enter email address"><br>
+                    <span class="error" id="emailError"></span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="gender-1">Gender</label>
+                <div class="radio-button">
+                    <div class="form-input">
+                        <label for="gender-1">Male
+                            <input id="gender-1" type="radio" name="gender" value="0">
+                        </label>
+                         <label for="gender-2">Female
+                            <input id="gender-2" type="radio" name="gender" value="1">
+                        </label><br/>
+                        <span class="error" id="genderError"></span>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <label for="select">Select:</label>
+                <div class="form-input">
+                    <select id="select" name="select">
+                        <option value="0">Please select</option>
+                        <option value="1">B.Tech</option>
+                        <option value="2">BBA</option>
+                        <option value="3">BCOM</option>
+                    </select> <br/>
+                    <span class="error" id="selectError"></span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="message">Your message:</label>
+                <div class="form-input">
+                    <textarea id="message" name="message" rows="3" placeholder="Maximum characters: 50" maxlength="50"></textarea><br>
+                    <span class="error" id="messageError"></span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="file">Upload file:</label>
+                <div class="form-input input-file">
+                    <input type="file" id="file" name="fileUpload">
+                    <span class="error" id="fileError"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-input form-checkbox">
+                    <label for="checkbox" class="label-checkbox">
+                        <input type="checkbox" id="checkbox" name="check"> I agree <a href="#">T & C</a>
+                    </label>
+                    <span class="error" id="checkboxError"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-input form-checkbox">
+                    <input class="submit" type="submit" value="Submit" >
+                </div>
+            </div>
+        </form>
+	</div>
+    <script type="text/javascript" src="js/javascript.Validation.js"></script>
+</body>
+</html>
